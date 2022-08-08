@@ -4,7 +4,7 @@ from fibonacci.fibbonacci import fibonacci
 
 
 def print_fibonacci(num: int) -> None:
-    print("%d: %d".format(num, fibonacci(num)))
+    print("{0:d}: {1:d}".format(num, fibonacci(num)))
 
 
 def get_exec_time(function: callable(object), argument: int) -> float:
@@ -14,8 +14,9 @@ def get_exec_time(function: callable(object), argument: int) -> float:
 
 
 def main():
-    for num in [10, 20]:
-        print("duration: %s seconds".format(get_exec_time(fibonacci, num)))
+    for num in [10, 20, 30, 35]:
+        print("duration: {0} seconds".format(get_exec_time(print_fibonacci,
+                                                           num)))
 
 
 if __name__ == '__main__':
