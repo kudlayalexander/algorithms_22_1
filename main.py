@@ -1,22 +1,25 @@
-import time
+def gcd(a: int, b: int) -> int:
+    """Calculates the greatest common divisor of two numbers
 
-from fibonacci.fibbonacci import fibonacci
+    :param a: first number
+    :param b: second number
+    :return: greatest common divisor
+    """
+    pass
 
 
-def print_fibonacci(num: int) -> None:
-    print("{0:d}: {1:d}".format(num, fibonacci(num)))
+def lcm(a: int, b: int) -> int:
+    """Calculates the least common multiple of two numbers
 
-
-def get_exec_time(function: callable(object), argument: int) -> float:
-    start_time = time.time()
-    function(argument)
-    return time.time() - start_time
+    :param a: first number
+    :param b: second number
+    :return: the least common multiple
+    """
+    pass
 
 
 def main():
-    for num in [10, 20, 30, 35]:
-        print("duration: {0} seconds".format(get_exec_time(print_fibonacci,
-                                                           num)))
+    pass
 
 
 if __name__ == '__main__':
