@@ -14,7 +14,7 @@ class TestGcd(unittest.TestCase):
         self.assertRaises(Exception, gcd, 1, None)
 
     def test_simple(self):
-        self.assertEqual(gcd(10, 3), 3)
+        self.assertEqual(gcd(9, 3), 3)
 
     def test_simple_long(self):
         self.assertEqual(gcd(1005002, 1354), 2)
