@@ -62,7 +62,7 @@ class GcdGenerator:
     @property
     def lcm_value(self) -> int:
         """Returns the least common multiple of a_value and b_value"""
-        return self.gcd_value * self.a_value * self.b_value
+        return self.__values[0] * self.__values[1] * self.__values[2]
 
     @property
     def max_factor_cnt(self) -> int:
