@@ -1,12 +1,10 @@
 import unittest
-import random
 
 from main import gcd
+from gcd_gen import GcdGenerator
 
 
 class TestGcd(unittest.TestCase):
-    primes = [2, 3, 5, 7, 11, 13, 17, 19, 23]
-
     def test_first_none(self):
         self.assertRaises(Exception, gcd, None, 1)
 
@@ -20,16 +18,11 @@ class TestGcd(unittest.TestCase):
         self.assertEqual(gcd(1005002, 1354), 2)
 
     def test_random(self):
+        gcd_gen = GcdGenerator()
         for i in range(10):
-            values = self.__generate_random_values()
-            self.assertEqual(gcd(values["a"], values["b"]), values["gcd"])
-
-    def __generate_random_values(self):
-        values = [1, 1, 1]
-        for prime in self.primes:
-            values[random.randint(0, 2)] *= prime ** random.randint(0, 5)
-        return {"gcd": values[0], "a": values[0] * values[1],
-                "b": values[0] * values[2]}
+            gcd_gen.generate_values()
+            self.assertEqual(gcd(gcd_gen.a_value, gcd_gen.b_value),
+                             gcd_gen.gcd_value)
 
 
 if __name__ == '__main__':
