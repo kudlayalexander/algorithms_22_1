@@ -72,6 +72,7 @@ class GcdGenerator:
         """
         if factor_cnt > len(self.__primes):
             factor_cnt = len(self.__primes)
+        self.__values = [1, 1, 1]
         for prime in self.__primes[:factor_cnt]:
             rand_value_idx = random.randint(0, 2)
             rand_pow = random.randint(0, max_pow)
