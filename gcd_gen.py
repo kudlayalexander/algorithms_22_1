@@ -6,22 +6,25 @@ class GcdGenerator:
     raised to a random power. The multipliers from gcd_value contains in a_value
     and b_value, but the other multipliers in the a_value and b_value does not
     intersect.
-    The class is used for unit testing of the gcd function.
+    The class is used for unit testing of the gcd and lcm functions.
 
     Properties:
     -----------
     gcd_value -> int:
-        Returns the greatest common divisor of a_value and b_value
+        Returns the greatest common divisor of a_value and b_value.
     a_value -> int:
         Returns the number obtained as a result of multiplying primes
         raised to a random power. The number has both the same and different
-        multipliers with b_value
+        multipliers with b_value.
     b_value -> int:
         Returns the number obtained as a result of multiplying primes
         raised to a random power. The number has both the same and different
-        multipliers with a_value
+        multipliers with a_value.
     max_factor_cnt -> int:
-        Returns the number of primes for the generated values
+        Returns the number of primes for the generated values.
+    lcm_value -> int:
+        Returns the least common multiple of a_value and b_value.
+
     Methods:
     -------
     generate_values(factor_cnt: int = 3, max_pow: int = 5) -> None:
@@ -55,6 +58,11 @@ class GcdGenerator:
         raised to a random power. The number has both the same and different
         multipliers with a_value"""
         return self.__values[2] * self.gcd_value
+
+    @property
+    def lcm_value(self) -> int:
+        """Returns the least common multiple of a_value and b_value"""
+        return self.gcd_value * self.a_value * self.b_value
 
     @property
     def max_factor_cnt(self) -> int:
