@@ -4,7 +4,7 @@ from main import lcm
 from gcd_gen import GcdGenerator
 
 
-class TestGcd(unittest.TestCase):
+class TestLcm(unittest.TestCase):
     def test_first_none(self):
         self.assertRaises(Exception, lcm, None, 1)
 
