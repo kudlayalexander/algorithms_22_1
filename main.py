@@ -1,20 +1,28 @@
-def generate_permutations(digit_cnt: int, result_output: list[str],
-                          prefix: list[int] = None, level: int = -1) -> None:
-    """Generates permutations of digits and adds them into the result_output
-    list.
+import time
+from typing import Any
 
-    :param digit_cnt: number of digits used for permutations.
-    :param result_output: a list for adding permutation strings.
-    :param prefix: a list of generated digits.
-    :param level: generation level.
-    :raise Exception: when the digit_cnt value is None.
-    :return: None
+
+def print_exec_time(func: callable(object), **kwargs: dict[str: Any]) -> None:
+    start_time = time.time()
+    func(**kwargs)
+    print(f'duration: {time.time() - start_time} seconds')
+
+
+def generate_permutations(items: set[Any]) -> list[str]:
+    """Generates all permutations by a set of items.
+
+    :param items: a set with some items.
+    :raise Exception: when the items value is None.
+    :return: a list with permutation strings.
     """
     pass
 
 
 def main():
-    pass
+    print_exec_time(lambda items: print(generate_permutations(items)),
+                    items={1, 2, 3})
+    print_exec_time(lambda items: print(generate_permutations(items)),
+                    items={1, 2, 3, 4, 5})
 
 
 if __name__ == '__main__':
