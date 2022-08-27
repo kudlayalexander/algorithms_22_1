@@ -1,6 +1,6 @@
 import unittest
 
-from determinant import determinant
+from main import determinant
 
 
 class TestDeterminant(unittest.TestCase):
