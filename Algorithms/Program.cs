@@ -2,21 +2,51 @@
 {
     public static class Program
     {
+        /// <summary>
+        /// Calculates the greatest common divisor of two numbers
+        /// </summary>
+        /// <param name="a">first number</param>
+        /// <param name="b">second number</param>
+        /// <returns>greatest common divisor</returns>
+        public static int GcdRecursive(int a, int b)
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Calculates the greatest common divisor of two numbers
+        /// </summary>
+        /// <param name="a">first number</param>
+        /// <param name="b">second number</param>
+        /// <returns>greatest common divisor</returns>
+        public static int GcdIterativeSlow(int a, int b)
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Calculates the greatest common divisor of two numbers
+        /// </summary>
+        /// <param name="a">first number</param>
+        /// <param name="b">second number</param>
+        /// <returns>greatest common divisor</returns>
+        public static int GcdIterativeFast(int a, int b)
+        {
+            throw new NotImplementedException();
+        }
+        /// <summary>
+        /// Calculates the least common multiple of two numbers
+        /// </summary>
+        /// <param name="a">first number</param>
+        /// <param name="b">second number</param>
+        /// <returns>least common multiple</returns>
+        public static int Lcm(int a, int b)
+        {
+            throw new NotImplementedException();
+        }
+        
         public static void Main(string[] args)
         {
-            Console.WriteLine("Fibonacci numbers:");
-            for (var i = 1; i < 10; i++)
-            {
-                Console.WriteLine($"{i}: {Fibonacci.FibonacciRec(i)}");
-            }
-            int[,] matrix = new int[3, 3]
-            {
-                { 1, -2, 3 }, 
-                { -4, 5, -6 },
-                { 7, -8, 9 }
-            };
-            Console.WriteLine("\ninteger square matrix:\n1, -2, 3\n-4, 5, -6\n7, -8, 9");
-            Console.WriteLine($"matrix determinant: {Determinant.GetDeterminant(matrix)}");
+            Console.WriteLine($"a = 9\nb = 3\ngcd(a, b) = {GcdIterativeFast(9, 3)}");
+            Console.WriteLine($"a = 6\nb = 8\nlcm(a, b) = {Lcm(6, 8)}");
         }
     }
 }
