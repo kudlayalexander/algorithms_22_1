@@ -2,9 +2,19 @@ import time
 from typing import Any
 
 
-def fibonacci(num: int) -> int:
+def fibonacci_rec(num: int) -> int:
     """Returns the fibonacci number according to the number specified in the
-    parameter.
+    parameter. Recursive implementation.
+
+    :param num: the ordinal number of the fibonacci number
+    :return: a fibonacci number
+    """
+    pass
+
+
+def fibonacci_iter(num: int) -> int:
+    """Returns the fibonacci number according to the number specified in the
+    parameter. Iterative implementation.
 
     :param num: the ordinal number of the fibonacci number
     :return: a fibonacci number
@@ -29,7 +39,7 @@ def print_exec_time(func: callable(object), **kwargs: dict[str: Any]) -> None:
 
 def main():
     for num in [10, 20, 30, 35]:
-        print_exec_time(lambda x: print(x, fibonacci(x)), x=num)
+        print_exec_time(lambda x: print(x, fibonacci_rec(x)), x=num)
 
     matrix = [[1, 2],
               [3, 4]]
