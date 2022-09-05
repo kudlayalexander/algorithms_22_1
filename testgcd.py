@@ -30,7 +30,7 @@ class TestGcd(unittest.TestCase):
                 if gcd == gcd_iterative_fast:
                     gcd_gen.generate_values(9, 5)
                 else:
-                    gcd_gen.generate_values(4, 2)
+                    gcd_gen.generate_values(3, 2)
                 self.assertEqual(gcd(gcd_gen.a_value, gcd_gen.b_value),
                                  gcd_gen.gcd_value)
 
