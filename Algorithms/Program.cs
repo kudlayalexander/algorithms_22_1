@@ -8,7 +8,7 @@
         /// <param name="a">first number</param>
         /// <param name="b">second number</param>
         /// <returns>greatest common divisor</returns>
-        public static int GcdRecursive(int a, int b)
+        public static Int64 GcdRecursive(Int64 a, Int64 b)
         {
             throw new NotImplementedException();
         }
@@ -18,7 +18,7 @@
         /// <param name="a">first number</param>
         /// <param name="b">second number</param>
         /// <returns>greatest common divisor</returns>
-        public static int GcdIterativeSlow(int a, int b)
+        public static Int64 GcdIterativeSlow(Int64 a, Int64 b)
         {
             throw new NotImplementedException();
         }
@@ -28,7 +28,7 @@
         /// <param name="a">first number</param>
         /// <param name="b">second number</param>
         /// <returns>greatest common divisor</returns>
-        public static int GcdIterativeFast(int a, int b)
+        public static Int64 GcdIterativeFast(Int64 a, Int64 b)
         {
             throw new NotImplementedException();
         }
@@ -38,7 +38,7 @@
         /// <param name="a">first number</param>
         /// <param name="b">second number</param>
         /// <returns>least common multiple</returns>
-        public static int Lcm(int a, int b)
+        public static Int64 Lcm(Int64 a, Int64 b)
         {
             throw new NotImplementedException();
         }

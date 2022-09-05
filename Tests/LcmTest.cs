@@ -28,7 +28,7 @@ public class LcmTest
         GcdGenerator generator = new GcdGenerator();
         for (var i = 0; i < 10; i++)
         {
-            generator.GenerateValues();
+            generator.GenerateValues(5, 3);
             Assert.Equal(generator.LcmValue, Program.Lcm(generator.AValue, generator.BValue));
         }
     }
