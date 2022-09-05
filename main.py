@@ -1,5 +1,28 @@
-def gcd(a: int, b: int) -> int:
+def gcd_recursive(a: int, b: int) -> int:
+    """Calculates the greatest common divisor of two numbers.
+    Recursive implementation.
+
+    :param a: first number
+    :param b: second number
+    :return: greatest common divisor
+    """
+    pass
+
+
+def gcd_iterative_slow(a: int, b: int) -> int:
+    """Calculates the greatest common divisor of two numbers.
+    Iterative implementation using subtraction.
+
+    :param a: first number
+    :param b: second number
+    :return: greatest common divisor
+    """
+    pass
+
+
+def gcd_iterative_fast(a: int, b: int) -> int:
     """Calculates the greatest common divisor of two numbers
+    Iterative implementation using division.
 
     :param a: first number
     :param b: second number
