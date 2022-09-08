@@ -8,10 +8,12 @@ class TestFibonacci(unittest.TestCase):
                987, 1597, 2584, 4181, 6765, 10946, 17711]
 
     def test_fibonacci(self):
-        for fibonacci in [fibonacci_rec, fibonacci_iter]:
+        for fibonacci in [fibonacci_iter]:
             for index, number in enumerate(self.numbers):
+                print(index+1)
+                print(fibonacci(index+1))
                 self.assertEqual(fibonacci(index + 1), number)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
