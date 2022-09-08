@@ -39,9 +39,9 @@ def fibonacci_rec(num: int) -> int:
     """
     
     if num == 0: 
-        return 1 
-    elif num == 1:
         return 0 
+    elif num == 1:
+        return 1 
 
     return fibonacci_rec(num-1)+fibonacci_rec(num-2)
 
@@ -109,9 +109,9 @@ def fibonacci_iter(num: int) -> int:
     """
     
     if num == 0: 
-        return 1 
-    elif num == 1:
         return 0 
+    elif num == 1:
+        return 1 
     
     pred = 1
     predpred = 1
