@@ -22,6 +22,12 @@ class TestDeterminant(unittest.TestCase):
                   [7, -8, 9]]
         self.assertEqual(determinant(matrix), 0)
 
+    def test_zero_in_row(self):
+        matrix = [[1, -2, 3],
+                  [0, 5, -6],
+                  [7, -8, 9]]
+        self.assertEqual(determinant(matrix), -24)
+
     def test_fourth_order(self):
         matrix = [[3, -3, -5, 8],
                   [-3, 2, 4, -6],
