@@ -71,7 +71,7 @@ def determinant(matrix: [[int]]) -> int:
         for j in range(l):
             if len(matrix_copy[j]) != 0:
                 new_matrix.append(matrix_copy[j])
-        sum += matrix[most_nulls_row][i] * determinant(new_matrix) * ((-1) ** i)
+        sum += matrix[most_nulls_row][i] * determinant(new_matrix) * ((-1) ** (i + most_nulls_row))
     return sum
 
 
