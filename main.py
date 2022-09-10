@@ -126,11 +126,18 @@ def determinant(matrix) -> int:
     :raise Exception: when the parameter value is not a square matrix
     :return: the value of the matrix determinant
     """
+    flag_ziro = False
     flag_row = False
+
     for i in matrix:
         if len(matrix) != len(i):
             flag_row = True
     
+    for i in range(len(matrix)):
+        for y in range(len(matrix[i])):           
+            if matrix[i][y] == 0:
+                flag_ziro = True
+
     if flag_row: 
         raise Exception("parametr is not a square matrix") 
 
@@ -140,6 +147,42 @@ def determinant(matrix) -> int:
     elif len(matrix) == 2:
         return matrix[0][0]*matrix[1][1] - matrix[0][1]*matrix[1][0]
     
+    elif flag_ziro:
+        for i in range(len(matrix)):
+            # Если это перввый столбик
+            if i == 0:
+                # пробегаемся по строкам так, чтобы можно было домножить
+                for item in range(1,len(matrix)):
+                    if matrix[i][0] > matrix[item][0]:
+                        if matrix[item][0] != 0:
+                            num = matrix[i][0]/matrix[item][0]
+                            for isa in range(len(matrix[item])):
+                                matrix[item][isa] = matrix[item][isa] * num - matrix[i][isa]  
+                    elif  matrix[i][0] < matrix[item][0]:
+                        num = matrix[item][0]/matrix[i][0]
+                        for isa in range(len(matrix[item])):
+                                matrix[item][isa] = matrix[item][isa]- matrix[i][isa] * num 
+            else:
+                for item in range(1,len(matrix)):
+                    if matrix[i][i] > matrix[item][i]:
+                        if matrix[item][i] != 0:
+                            num = matrix[i][i]/matrix[item][i]
+                            for isa in range(i,len(matrix[item])):
+                                matrix[item][isa] = matrix[item][isa] * num - matrix[i][isa]  
+                    elif  matrix[i][i] < matrix[item][i]:
+                        num = matrix[item][i]/matrix[i][i]
+                        for isa in range(i,len(matrix[item])):
+                                matrix[item][isa] = matrix[item][isa]- matrix[i][isa] * num 
+        
+        param = []
+
+        for i in range(len(matrix)):
+            param.append(matrix[i][i])
+        resul = 1
+        for i in param:
+            resul *=i
+        return round(resul)
+
     else:
         param = []
         for item in range(len(matrix)-1):
@@ -155,8 +198,6 @@ def determinant(matrix) -> int:
         for i in param:
             resul *=i
         return round(resul)
-            
-
 
 
             
@@ -169,13 +210,13 @@ def print_exec_time(func: callable(object), **kwargs: dict[str: Any]) -> None:
 
 
 def main():
-    for num in [10, 20, 30, 35]:
-        print_exec_time(lambda x: print(x, fibonacci_iter(x)), x=num)
+    # for num in [10, 20, 30, 35]:
+    #     print_exec_time(lambda x: print(x, fibonacci_iter(x)), x=num)
 
-    # matrix =[[1, -2, 3],
-    #               [-4, 5, -6],
-    #               [7, -8, 9]]
-    # print(f'determinant: {determinant(matrix)}')
+    matrix =[[15, 2, 4],
+                  [2, 0, 1],
+                  [52, 2, 1]]
+    print(f'determinant: {determinant(matrix)}')
 
 
 if __name__ == '__main__':
