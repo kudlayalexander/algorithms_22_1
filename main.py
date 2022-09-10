@@ -9,7 +9,13 @@ def fibonacci_rec(num: int) -> int:
     :param num: the ordinal number of the fibonacci number
     :return: a fibonacci number
     """
-    pass
+    if num == 0:
+        return 0
+    elif num == 1:
+        return 1
+    else:
+        return fibonacci_rec(num - 2) + fibonacci_rec(num - 1)
+
 
 
 def fibonacci_iter(num: int) -> int:
@@ -19,7 +25,16 @@ def fibonacci_iter(num: int) -> int:
     :param num: the ordinal number of the fibonacci number
     :return: a fibonacci number
     """
-    pass
+    if num == 0:
+        return 0
+    elif num == 1:
+        return 1
+    else:
+        prev1 = prev2 = 1
+        for i in range(2, num):
+            prev1, prev2 = prev2, prev1 + prev2
+        return prev2
+
 
 
 def determinant(matrix: [[int]]) -> int:
