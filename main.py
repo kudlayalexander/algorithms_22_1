@@ -1,4 +1,4 @@
-def hello(hello) -> str:
+def hello() -> str:
     """Returns Hello World greetings"""
     return "Hello world!"
 
