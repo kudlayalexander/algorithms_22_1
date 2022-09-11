@@ -48,6 +48,18 @@ public class DeterminantTest
     }
     
     [Fact]
+    public void TestZeroInRow()
+    {
+        int[,] matrix = new int[3, 3]
+        {
+            { 1, -2, 3 }, 
+            { 0, 5, -6 },
+            { 7, -8, 9 }
+        };
+        Assert.Equal(-24, Determinant.GetDeterminant(matrix));
+    }
+    
+    [Fact]
     public void TestFourthOrder()
     {
         int[,] matrix = new int[4, 4]
