@@ -8,10 +8,10 @@ def print_exec_time(func: callable(object), **kwargs: dict[str: Any]) -> None:
     print(f'duration: {time.time() - start_time} seconds')
 
 
-def generate_permutations(items: set[Any]) -> list[str]:
+def generate_permutations(items: frozenset[Any]) -> list[str]:
     """Generates all permutations by a set of items.
 
-    :param items: a set with some items.
+    :param items: a frozenset(immutable) with some items.
     :raise Exception: when the items value is None.
     :return: a list with permutation strings.
     """
